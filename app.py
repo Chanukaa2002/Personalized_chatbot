@@ -10,40 +10,42 @@ from rapidfuzz import process, fuzz
 app = Flask(__name__)
 CORS(app)
 
+# Thresholds
 CONFIDENCE_THRESHOLD = float(os.getenv('THRESHOLD', '0.55'))
-FUZZY_THRESHOLD = 75 
+FUZZY_THRESHOLD = 75
 
 # Load intents
 with open('data/intents.json', encoding='utf-8') as f:
     intents_data = json.load(f)
 
+# Load vectorizer and encoder
 try:
     vectorizer = pickle.load(open('./model/vectorizer.pkl', 'rb'))
     encoder = pickle.load(open('./model/label_encoder.pkl', 'rb'))
-    model = None
     print("✅ Vectorizer and encoder loaded!")
 except Exception as e:
     print("❌ Error loading vectorizer/encoder:", e)
     vectorizer = None
     encoder = None
-    model = None
 
-# embed_model = SentenceTransformer('all-MiniLM-L6-v2')
-embed_model = SentenceTransformer('paraphrase-MiniLM-L3-v2')
-
+# Load lightweight embedding model
+embed_model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
 print("⚡ Warming up SentenceTransformer model...")
 _ = embed_model.encode("Hello", convert_to_tensor=True)
 print("✅ SentenceTransformer ready!")
 
+# Prepare patterns and embeddings
 patterns = []
 pattern_tags = []
 for intent in intents_data['intents']:
     for pattern in intent['patterns']:
         patterns.append(pattern.lower())
         pattern_tags.append(intent['tag'])
+
 pattern_embeddings = embed_model.encode(patterns, convert_to_tensor=True)
 pattern_embeddings.requires_grad = False
 
+# Text preprocessing
 def preprocess(text):
     text = text.lower()
     text = text.replace("tnx", "thanks").replace("thx", "thanks")
@@ -51,6 +53,7 @@ def preprocess(text):
     text = text.replace("wht", "what").replace("abt", "about")
     return text
 
+# /chat endpoint
 @app.route("/chat", methods=["POST"])
 def chat():
     random.seed(time.time())
@@ -60,12 +63,14 @@ def chat():
 
     user_msg_clean = preprocess(user_msg)
 
+    # Exact match
     for intent_data in intents_data['intents']:
         for pattern in intent_data['patterns']:
             if user_msg_clean == pattern.lower():
                 response = random.choice(intent_data.get('responses', []))
                 return jsonify({"reply": response, "intent": intent_data['tag'], "confidence": 1.0})
 
+    # Fuzzy match
     result = process.extractOne(user_msg_clean, patterns, scorer=fuzz.WRatio)
     if result:
         if isinstance(result, tuple):
@@ -84,11 +89,11 @@ def chat():
                 response = random.choice(intent_responses)
                 return jsonify({"reply": response, "intent": intent, "confidence": round(score/100, 2)})
 
-
+    # Embedding similarity
     user_embedding = embed_model.encode(user_msg_clean, convert_to_tensor=True)
     cos_scores = util.pytorch_cos_sim(user_embedding, pattern_embeddings)
-
     top_scores, top_indices = torch.topk(cos_scores, k=min(3, len(patterns)))
+
     responses = []
     primary_intent = None
     primary_score = 0.0
@@ -120,17 +125,9 @@ def chat():
         )
         return jsonify({"reply": fallback, "intent": "unknown", "confidence": 0.0})
 
-    if model and vectorizer and encoder:
-        try:
-            X_new = vectorizer.transform([user_msg_clean])
-            y_new = encoder.transform([intent])
-            model.fit(X_new.toarray(), y_new, epochs=1, batch_size=1, verbose=0)
-        except:
-            pass
-
     return jsonify({"reply": response, "intent": intent, "confidence": round(top_score, 2)})
 
+# Run app
 if __name__ == "__main__":
-    import os
     port = int(os.environ.get("PORT", 7860))
     app.run(host="0.0.0.0", port=port, debug=False)
