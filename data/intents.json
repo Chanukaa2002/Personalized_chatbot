@@ -1,0 +1,131 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Hey there", "Good morning", "Good evening"],
+      "responses": [
+        "Hey there! 👋 I'm ChanukaBot — your guide to Chanuka Dilshan’s portfolio.",
+        "Hello! I'm Chanuka's virtual assistant. Want to know about his projects or skills?",
+        "Hi! I'm here to help you explore Chanuka Dilshan’s work in Machine Learning and Backend Engineering."
+      ]
+    },
+    {
+      "tag": "intro",
+      "patterns": [
+        "Who is Chanuka?", 
+        "Introduce Chanuka", 
+        "What does Chanuka do?", 
+        "Tell me about Chanuka"
+      ],
+      "responses": [
+        "Chanuka Dilshan is a passionate Backend and Machine Learning Engineer dedicated to building amazing backend systems and intelligent ML models.",
+        "Chanuka is a 23-year-old aspiring ML Engineer and Backend Developer, focused on applying machine learning to solve real-world problems."
+      ]
+    },
+    {
+      "tag": "about_me",
+      "patterns": [
+        "Tell me more about Chanuka",
+        "Can you describe him?",
+        "What is his background?",
+        "Who are you Chanuka?"
+      ],
+      "responses": [
+        "Chanuka is a 23-year-old Machine Learning Engineer with a strong background in Backend Development. Currently pursuing his degree at NIBM and certified as a Postman Student Expert, he started by building scalable APIs and backend systems — and later expanded into ML research and applications.",
+        "He’s passionate about integrating ML into production systems and is currently seeking an internship to contribute to impactful projects while deepening his expertise in AI."
+      ]
+    },
+    {
+      "tag": "education",
+      "patterns": [
+        "What is Chanuka studying?",
+        "Tell me about his education",
+        "Where does Chanuka study?",
+        "What are his academic qualifications?"
+      ],
+      "responses": [
+        "Chanuka is currently reading for a Higher National Diploma in Software Engineering at the National Institute of Business Management (NIBM), focusing on Machine Learning, Cloud Computing, and Backend Development. He completed his Diploma in Software Engineering with a perfect 4.0 GPA and was on the Dean’s List.",
+        "Education Summary:\n- Higher National Diploma in Software Engineering (NIBM, 2023–2024)\n- Diploma in Software Engineering (NIBM, 2021–2022, 4.0 GPA)\n- G.C.E. A/L – Biological Science stream (Upananda College, Galle)"
+      ]
+    },
+    {
+      "tag": "skills",
+      "patterns": [
+        "What skills does Chanuka have?",
+        "What technologies does he use?",
+        "Tell me about his technical skills",
+        "What programming languages does Chanuka know?"
+      ],
+      "responses": [
+        "Chanuka’s core skills include:\n\n• **Machine Learning & AI:** Python, PyTorch, scikit-learn\n• **Backend Development:** Node.js, Express.js, Java, Spring Boot, PHP\n• **Frontend & Web:** React, Next.js, TailwindCSS\n• **Databases:** MongoDB, PostgreSQL, Firebase\n• **DevOps & Tools:** Git, Docker, AWS, Postman\n• **Other:** TypeScript, JavaScript, HTML/CSS"
+      ]
+    },
+    {
+      "tag": "projects",
+      "patterns": [
+        "What projects has Chanuka done?",
+        "Show me his projects",
+        "Tell me about his ML work",
+        "Where can I see his portfolio projects?"
+      ],
+      "responses": [
+        "Chanuka has built several exciting projects:\n\n1️⃣ **Build Own Simple Neural Network** – Built from scratch using Python & NumPy.\n2️⃣ **EATRO (Mobile App)** – Flutter + Firebase + Gemini API for meal tracking with IoT integration.\n3️⃣ **Hogwarts House Prediction App** – React + Flask + scikit-learn ML web app.\n4️⃣ **RoutZ Path Finder** – Next.js + Node.js + Dijkstra algorithm for route optimization.\n5️⃣ **Laptop Price Prediction** – Flask ML regression web app.\n6️⃣ **Movie Recommendation System** – Streamlit + ML-based content recommender.\n7️⃣ **Personal Portfolio** – Built with React & TailwindCSS.\n8️⃣ **MerdiAI** – A Next.js project contributing to text-to-diagram generation.\n\nYou can explore them all at 👉 https://www.chanukadilshan.live/projects"
+      ]
+    },
+    {
+      "tag": "certifications",
+      "patterns": [
+        "What certifications does Chanuka have?",
+        "Show me his certificates",
+        "Is Chanuka certified?",
+        "Tell me about his achievements"
+      ],
+      "responses": [
+        "Chanuka holds several certifications, including:\n\n• Advanced Learning Algorithms (Deeplearning.ai)\n• Supervised Machine Learning (Deeplearning.ai)\n• Linear Algebra for ML & Data Science (Deeplearning.ai)\n• Python for Beginners (UOM)\n• Front-End & Web Design (UOM)\n• Machine Learning Foundations (AWS)\n• Postman Student Expert\n• GenAI 101 with Pieces\n• AWS Emerging Talent Community\n\nHe’s continuously learning and adding to his skillset!"
+      ]
+    },
+    {
+      "tag": "career",
+      "patterns": [
+        "Is Chanuka looking for a job?",
+        "Is Chanuka open to internships?",
+        "Can I hire Chanuka?",
+        "What kind of work is Chanuka interested in?"
+      ],
+      "responses": [
+        "Chanuka is currently open to **Machine Learning** and **Backend Engineering internships**. He’s especially interested in roles involving AI model development, API systems, and data-driven applications.",
+        "Yes — he’s looking for an internship opportunity where he can contribute to real-world ML systems and continue learning from industry experts."
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "How can I contact Chanuka?",
+        "What's his email?",
+        "Where can I find him online?",
+        "How do I reach Chanuka?"
+      ],
+      "responses": [
+        "You can reach Chanuka via:\n📧 Email: mchanuka72@gmail.com\n💻 GitHub: https://github.com/Chanukaa2002\n📝 Medium: https://medium.com/@Chanuka72\n\nOr use the contact section on his website 👉 https://www.chanukadilshan.live/#contact"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "Appreciate it", "That was helpful"],
+      "responses": [
+        "You're very welcome! 😊",
+        "Glad I could help!",
+        "Anytime! Feel free to explore more about Chanuka’s work."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye", "Catch you soon"],
+      "responses": [
+        "Goodbye! Have a great day ahead! 👋",
+        "See you later — thanks for chatting with ChanukaBot!",
+        "Bye! Check back soon for more of Chanuka’s work."
+      ]
+    }
+  ]
+}
