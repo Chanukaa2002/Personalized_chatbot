@@ -3,4 +3,4 @@ tensorflow>=2.11.0,<3.0.0
 numpy>=1.23.0
 scikit-learn>=1.0
 h5py>=3.1.0
-web: gunicorn app:app
+gunicorn app:app
