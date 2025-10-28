@@ -1,6 +1,9 @@
 Flask>=2.0,<3.0
-tensorflow>=2.11.0,<3.0.0
-numpy>=1.23.0
+flask-cors
+sentence-transformers
+torch
 scikit-learn>=1.0
+rapidfuzz
+numpy>=1.23.0
 h5py>=3.1.0
 gunicorn
