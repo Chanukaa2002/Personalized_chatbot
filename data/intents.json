@@ -2,7 +2,10 @@
   "intents": [
     {
       "tag": "greeting",
-      "patterns": ["Hi", "Hello", "Hey", "Hey there", "Good morning", "Good evening"],
+      "patterns": [
+        "Hi", "Hello", "Hey", "Hey there", "Good morning", "Good evening",
+        "Hii", "Helo", "Yo", "What's up", "Greetings", "Heyy", "Hi there", "Hey ChanukaBot", "Hello bot"
+      ],
       "responses": [
         "Hey there! 👋 I'm ChanukaBot — your guide to Chanuka Dilshan’s portfolio.",
         "Hello! I'm Chanuka's virtual assistant. Want to know about his projects or skills?",
@@ -10,12 +13,17 @@
       ]
     },
     {
-      "tag": "intro",
+      "tag": "about_me",
       "patterns": [
-        "Who is Chanuka?", 
-        "Introduce Chanuka", 
-        "What does Chanuka do?", 
-        "Tell me about Chanuka"
+        "Who is Chanuka?", "Tell me about Chanuka", "What does Chanuka do?",
+        "Can you describe him?", "What field is he in?", "What is this guy working on?",
+        "Introduce Chanuka", "Give me info about Chanuka", "What is he studying?",
+        "What kind of work does he do?", "What does this guy specialize in?",
+        "Can you summarize his background?", "What is he passionate about?",
+        "Tell me more about him", "I want to know about Chanuka’s career",
+        "What’s Chanuka's profession?", "Who is he?", "His background?",
+        "What does he focus on?", "Info about Chanuka", "Profile of Chanuka",
+        "What is his role in tech?", "About Chanuka", "Can you tell me about him?"
       ],
       "responses": [
         "Chanuka Dilshan is a passionate Backend and Machine Learning Engineer dedicated to building amazing backend systems and intelligent ML models.",
@@ -23,38 +31,27 @@
       ]
     },
     {
-      "tag": "about_me",
+      "tag": "intro",
       "patterns": [
-        "Tell me more about Chanuka",
-        "Can you describe him?",
-        "What is his background?",
-        "Who are you Chanuka?"
+        "Who is Chanuka?", "Introduce Chanuka", "What does Chanuka do?", "Tell me about Chanuka",
+        "Can you tell me about Chanuka?", "Who is Chanuka Dilshan?", "Tell me his story",
+        "Give me a brief intro about Chanuka", "Background of Chanuka", "Short intro of Chanuka",
+        "Profile intro", "Describe Chanuka", "Info about Chanuka"
       ],
       "responses": [
-        "Chanuka is a 23-year-old Machine Learning Engineer with a strong background in Backend Development. Currently pursuing his degree at NIBM and certified as a Postman Student Expert, he started by building scalable APIs and backend systems — and later expanded into ML research and applications.",
-        "He’s passionate about integrating ML into production systems and is currently seeking an internship to contribute to impactful projects while deepening his expertise in AI."
-      ]
-    },
-    {
-      "tag": "education",
-      "patterns": [
-        "What is Chanuka studying?",
-        "Tell me about his education",
-        "Where does Chanuka study?",
-        "What are his academic qualifications?"
-      ],
-      "responses": [
-        "Chanuka is currently reading for a Higher National Diploma in Software Engineering at the National Institute of Business Management (NIBM), focusing on Machine Learning, Cloud Computing, and Backend Development. He completed his Diploma in Software Engineering with a perfect 4.0 GPA and was on the Dean’s List.",
-        "Education Summary:\n- Higher National Diploma in Software Engineering (NIBM, 2023–2024)\n- Diploma in Software Engineering (NIBM, 2021–2022, 4.0 GPA)\n- G.C.E. A/L – Biological Science stream (Upananda College, Galle)"
+        "Chanuka Dilshan is a passionate Backend and Machine Learning Engineer dedicated to building amazing backend systems and intelligent ML models.",
+        "Chanuka is a 23-year-old aspiring ML Engineer and Backend Developer, focused on applying machine learning to solve real-world problems."
       ]
     },
     {
       "tag": "skills",
       "patterns": [
-        "What skills does Chanuka have?",
-        "What technologies does he use?",
-        "Tell me about his technical skills",
-        "What programming languages does Chanuka know?"
+        "What skills does Chanuka have?", "What technologies does he know?", "Tell me about his technical skills",
+        "What programming languages does he know?", "Which tools can he use?", "Does he know Python?",
+        "What ML tools does he use?", "Can you list his abilities?", "Technical stack of Chanuka?",
+        "What is he good at?", "Which frameworks does he know?", "What is his expertise?",
+        "Skills and tools?", "Programming knowledge?", "Technical expertise?", "Languages he knows?",
+        "Tools and technologies?"
       ],
       "responses": [
         "Chanuka’s core skills include:\n\n• **Machine Learning & AI:** Python, PyTorch, scikit-learn\n• **Backend Development:** Node.js, Express.js, Java, Spring Boot, PHP\n• **Frontend & Web:** React, Next.js, TailwindCSS\n• **Databases:** MongoDB, PostgreSQL, Firebase\n• **DevOps & Tools:** Git, Docker, AWS, Postman\n• **Other:** TypeScript, JavaScript, HTML/CSS"
@@ -63,22 +60,35 @@
     {
       "tag": "projects",
       "patterns": [
-        "What projects has Chanuka done?",
-        "Show me his projects",
-        "Tell me about his ML work",
-        "Where can I see his portfolio projects?"
+        "What projects has Chanuka done?", "Show me his projects", "Tell me about his ML work",
+        "Where can I see his portfolio projects?", "Which apps has he built?", "Give me a list of his projects",
+        "Can you show his GitHub work?", "Examples of his projects?", "What did he create?", "His works?",
+        "Portfolio projects", "His software projects?", "Can you list his ML projects?",
+        "What has he built in tech?", "Projects and apps?", "Projects showcase", "Work portfolio"
       ],
       "responses": [
         "Chanuka has built several exciting projects:\n\n1️⃣ **Build Own Simple Neural Network** – Built from scratch using Python & NumPy.\n2️⃣ **EATRO (Mobile App)** – Flutter + Firebase + Gemini API for meal tracking with IoT integration.\n3️⃣ **Hogwarts House Prediction App** – React + Flask + scikit-learn ML web app.\n4️⃣ **RoutZ Path Finder** – Next.js + Node.js + Dijkstra algorithm for route optimization.\n5️⃣ **Laptop Price Prediction** – Flask ML regression web app.\n6️⃣ **Movie Recommendation System** – Streamlit + ML-based content recommender.\n7️⃣ **Personal Portfolio** – Built with React & TailwindCSS.\n8️⃣ **MerdiAI** – A Next.js project contributing to text-to-diagram generation.\n\nYou can explore them all at 👉 https://www.chanukadilshan.live/projects"
       ]
     },
     {
+      "tag": "education",
+      "patterns": [
+        "What is Chanuka studying?", "Tell me about his education", "Where does Chanuka study?",
+        "What are his academic qualifications?", "His school or college?", "Studies info?",
+        "Education details?", "Academic background?", "Degree and studies?", "What is he learning?",
+        "Current courses?", "Where is he studying now?", "Higher education info?"
+      ],
+      "responses": [
+        "Chanuka is currently reading for a Higher National Diploma in Software Engineering at the National Institute of Business Management (NIBM), focusing on Machine Learning, Cloud Computing, and Backend Development. He completed his Diploma in Software Engineering with a perfect 4.0 GPA and was on the Dean’s List.",
+        "Education Summary:\n- Higher National Diploma in Software Engineering (NIBM, 2023–2024)\n- Diploma in Software Engineering (NIBM, 2021–2022, 4.0 GPA)\n- G.C.E. A/L – Biological Science stream (Upananda College, Galle)"
+      ]
+    },
+    {
       "tag": "certifications",
       "patterns": [
-        "What certifications does Chanuka have?",
-        "Show me his certificates",
-        "Is Chanuka certified?",
-        "Tell me about his achievements"
+        "What certifications does Chanuka have?", "Show me his certificates", "Is Chanuka certified?",
+        "Tell me about his achievements", "Any courses completed?", "Certificates info?", "Professional certifications?",
+        "Completed courses?", "Credential list?", "Awards and certificates?", "Learning achievements?"
       ],
       "responses": [
         "Chanuka holds several certifications, including:\n\n• Advanced Learning Algorithms (Deeplearning.ai)\n• Supervised Machine Learning (Deeplearning.ai)\n• Linear Algebra for ML & Data Science (Deeplearning.ai)\n• Python for Beginners (UOM)\n• Front-End & Web Design (UOM)\n• Machine Learning Foundations (AWS)\n• Postman Student Expert\n• GenAI 101 with Pieces\n• AWS Emerging Talent Community\n\nHe’s continuously learning and adding to his skillset!"
@@ -87,10 +97,9 @@
     {
       "tag": "career",
       "patterns": [
-        "Is Chanuka looking for a job?",
-        "Is Chanuka open to internships?",
-        "Can I hire Chanuka?",
-        "What kind of work is Chanuka interested in?"
+        "Is Chanuka looking for a job?", "Is Chanuka open to internships?", "Can I hire Chanuka?",
+        "What kind of work is Chanuka interested in?", "Job opportunities?", "Career info?",
+        "Internship details?", "Work availability?", "Professional interests?", "Looking for work?"
       ],
       "responses": [
         "Chanuka is currently open to **Machine Learning** and **Backend Engineering internships**. He’s especially interested in roles involving AI model development, API systems, and data-driven applications.",
@@ -100,10 +109,9 @@
     {
       "tag": "contact",
       "patterns": [
-        "How can I contact Chanuka?",
-        "What's his email?",
-        "Where can I find him online?",
-        "How do I reach Chanuka?"
+        "How can I contact Chanuka?", "What's his email?", "Where can I find him online?",
+        "How do I reach Chanuka?", "Contact details?", "Get in touch?", "Email info?", "Connect with him?",
+        "Social links?", "Website contact?", "Reach Chanuka?"
       ],
       "responses": [
         "You can reach Chanuka via:\n📧 Email: mchanuka72@gmail.com\n💻 GitHub: https://github.com/Chanukaa2002\n📝 Medium: https://medium.com/@Chanuka72\n\nOr use the contact section on his website 👉 https://www.chanukadilshan.live/#contact"
@@ -111,7 +119,10 @@
     },
     {
       "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "Appreciate it", "That was helpful"],
+      "patterns": [
+        "Thanks", "Thank you", "Appreciate it", "That was helpful", "Thx", "Tnx",
+        "Thanks a lot", "Thanks!", "Much appreciated", "Grateful", "Cheers", "Thanks bot"
+      ],
       "responses": [
         "You're very welcome! 😊",
         "Glad I could help!",
@@ -120,7 +131,10 @@
     },
     {
       "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye", "Catch you soon"],
+      "patterns": [
+        "Bye", "See you later", "Goodbye", "Catch you soon", "Bye!", "See ya",
+        "Later", "Talk to you later", "Good night", "See you", "Farewell", "Bye bot"
+      ],
       "responses": [
         "Goodbye! Have a great day ahead! 👋",
         "See you later — thanks for chatting with ChanukaBot!",
