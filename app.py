@@ -28,7 +28,8 @@ except Exception as e:
     encoder = None
     model = None
 
-embed_model = SentenceTransformer('all-MiniLM-L6-v2')
+# embed_model = SentenceTransformer('all-MiniLM-L6-v2')
+embed_model = SentenceTransformer('paraphrase-MiniLM-L3-v2')
 
 print("⚡ Warming up SentenceTransformer model...")
 _ = embed_model.encode("Hello", convert_to_tensor=True)
