@@ -1,9 +1,1 @@
----
-title: ChanuxBot
-emoji: 🌖
-colorFrom: red
-colorTo: red
-sdk: docker
-pinned: false
----
-
+Personalized Chatbot develop for implement to Portfolio website
